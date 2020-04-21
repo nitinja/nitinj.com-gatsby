@@ -5,3 +5,9 @@
  */
 
 // You can delete this file if you're not using it
+
+require("prismjs/themes/prism.css")
+// gatsby-browser.js
+// require("prismjs/plugins/line-numbers/prism-line-numbers.css")
+// // gatsby-browser.js
+// require("prismjs/plugins/command-line/prism-command-line.css")
