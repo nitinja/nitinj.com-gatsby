@@ -1,32 +1,101 @@
+// @keyframes color-rotate {
+//     from {
+//         filter: hue-rotate(0deg);
+//     }
+//     to {
+//         filter: hue-rotate(360deg);
+//     }
+// }
+
+// .title {
+//     animation: color-rotate 10s;
+//     animation-iteration-count: infinite;
+//     animation-direction: alternate;
+// }
+
+/* Mobile styles */
 .header {
-    padding: 1rem 0 3rem;
+  grid-column: span 12;
+  padding: 0 1rem;
+  display: flex;
+  //align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--accent-light);
 }
 
 .title {
-    color: #000000;
-    font-size: 3rem;
-    text-decoration: none;
+  // color: #000000;
+  //font-size: 3rem;
+  //font-weight: bold;
+  //text-decoration: none;
+}
+
+.menu {
+    display: none;
+}
+
+.menu-hamburger-icon {
+    display: block;
+} 
+.menu-hamburger-icon img {
+    margin: 0.5rem;
+    width: 40px;
+    height: 40px;
+}
+.inmenu-theme-switcher {
+  display: block;
 }
 
 .nav-list {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
 
-    .nav-item {
-        color: #888;
-        font-size: .9rem;
+  .nav-item {
+    font-family: var(--headerFontFamily);
+    color: var(--foreground);
+    font-size: 1rem;
+    text-decoration: none;
+    margin-bottom: 1.3rem;
+    // &:not(:last-child){
+    // }
+  }
+  .nav-item:hover {
+    color: var(--accent-dark);
+  }
+
+  .active {
+    font-weight: bold;
+    color: var(--accent-dark);
+  }
+}
+
+/* Large tablets and laptops */
+@media screen and (min-width: 960px) {
+    .header {
+        grid-column: 1/4;
+        grid-row: span 2;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-bottom: 0;
+        border-right: 1px solid var(--accent-light);
+      }
+      .title {
+        color: var(--foreground);;
+        font-size: 3rem;
         text-decoration: none;
-        margin-right: 1.3rem;
-        // &:not(:last-child){
-        // }
+      }
+    .menu {
+        display: block;
     }
-    .nav-item:hover {
-        color: #333;
+    .nav-list {
+       
     }
-
-    .active {
-        font-weight: bold;
-        color: #333;
+    .menu-hamburger-icon{
+        display: none;
+    }
+    .inmenu-theme-switcher {
+      display: none;
     }
 }

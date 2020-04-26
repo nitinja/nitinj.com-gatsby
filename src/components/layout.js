@@ -5,21 +5,24 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+
 import "../styles/global.scss"
 import styles from "./layout.module.scss"
+import { ThemeSwitcher } from "./theme-switcher"
 
 const Layout = ({ children }) => {
-  const {site} = useStaticQuery(graphql`
-    query siteQuery{
+  useEffect(() => {}, [])
+  const { site } = useStaticQuery(graphql`
+    query siteQuery {
       site {
         siteMetadata {
-          title,
+          title
           author
         }
       }
@@ -27,15 +30,16 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
-        <Header siteTitle={site.siteMetadata.title} />
-        <main>{children}</main>
+    <div className={`grid ${styles.container}`}>
+      <Header siteTitle={site.siteMetadata.title}/>
+      <div className={styles.themeSwitcher}>
+        <ThemeSwitcher />
       </div>
-      <Footer author={site.siteMetadata.author}/>
+      <main className={styles.main}>{children}</main>
+      <Footer author={site.siteMetadata.author} />
     </div>
   )
-}
+} 
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

@@ -1,3 +1,90 @@
 html {
-    
+  // --gradDark: hsl(144, 100%, 89%);
+  // --gradLight: hsl(42, 94%, 76%);
+  // background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+  --headerFontFamily: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif';
+  --bodyFontFamily: "-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Helvetica","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --warning:rgba(254, 215, 102, 1);
+  --error: #db7f8e;
 }
+
+.light {
+  --accent-dark: #08a8e6;
+  --accent-light: #7CCDF4;
+  --foreground: rgb(52, 73, 94);
+  --background: rgb(248, 248, 248);
+  --light-grey:#C5C6C6;
+  --medium-grey: #B2B0B0;
+  --dark-grey: #9B9C9B
+}
+.dark {
+  --accent-dark: #08a8e6;
+  --accent-light: #7CCDF4;
+  --foreground: rgb(248, 248, 248);
+  --background: rgb(52, 73, 94);
+  --light-grey:#C5C6C6;
+  --medium-grey: #B2B0B0;
+  --dark-grey: #9B9C9B
+}
+ 
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: all 0.4s ease-in-out;
+}
+
+.main-logo {
+  height:80px;
+  width: 80px;
+}
+.light .main-logo-dark {
+  display: none;
+}
+.dark .main-logo-light {
+  display: none;
+}
+
+/* Grid system class */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 1fr auto;
+}
+
+.button {
+  background-color:none;
+  border:2px solid var(--primary);
+  color: var(--primary);
+  padding:6px 12px;
+  border-radius: 20px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
+  display:inline-block;
+}
+.button:hover {
+  color:#222;
+  background-color: var(--primary)
+}
+
+input, textarea {
+  background-color: rgba(255,255,255,0.05);
+  padding:10px 16px;
+  border-radius:20px;
+  border:2px solid #9893D8;
+  color:#f2f2f2;
+}
+
+
+/* Responsive template */
+/* Small Tablets */
+@media screen and (min-width: 620px){
+}
+
+/* Large tablets and laptops */
+@media screen and (min-width: 960px){
+}
+
+/* Desktops */
+@media screen and (min-width: 1200px){
+}
+
+
