@@ -1,0 +1,17 @@
+.home-page{
+    .line {
+        font-family: var(--headerFontFamily);
+        font-size: 1.5rem;
+        font-weight: normal;
+        // font-style: italic;
+    }
+}
+
+/* Large tablets and laptops */
+@media screen and (min-width: 960px){
+    .home-page{
+        .line {
+            font-size: 3rem;
+        }
+    }
+}

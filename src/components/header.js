@@ -2,26 +2,31 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useCallback } from "react"
 import styles from "./header.module.scss"
-import MenuImage from "../images/icons/menu.svg"
 import { ThemeSwitcher } from "./theme-switcher"
 import Logo from "./logo"
+import {RiMenuLine} from 'react-icons/ri'
+import Mandala from '../images/mandala.svg'
+import Socials from "./socials"
 
-const Header = ({ siteTitle }) => {
+const Header = ({isIndexPage, siteTitle}) => {
   return (
     <header className={styles.header}>
-      <div>
+      
         <Link to="/" className={styles.title}>
           {/* {siteTitle} */}
           <Logo />
+          <img src={Mandala} className={styles.mandala} />
         </Link>
 
-        <div>
-          Hello, I am Nitin Jadhav, Front-end Developer Architect
-        </div>
-      </div>
+        {!isIndexPage && <div className={styles.subtitle}>
+          Hello, I am Nitin Jadhav, <br/>Front-end Developer Architect
+        </div>} 
+     
       <div className={styles.menu}>
         <ul className={styles.navList}>
-          <li>
+
+          {/* <li>
+
             <Link
               className={styles.navItem}
               activeClassName={styles.active}
@@ -29,7 +34,7 @@ const Header = ({ siteTitle }) => {
             >
               Work
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               className={styles.navItem}
@@ -48,23 +53,18 @@ const Header = ({ siteTitle }) => {
               About
             </Link>
           </li>
-          <li>
-            <Link
-              className={styles.navItem}
-              activeClassName={styles.active}
-              to="/contact/"
-            >
-              Contact
-            </Link>
-          </li>
+         
           <li className={styles.inmenuThemeSwitcher}>
             <ThemeSwitcher />
           </li>
         </ul>
       </div>
       <div className={styles.menuHamburgerIcon}>
-        <img src={MenuImage} />
+       <RiMenuLine size="2rem"/>
       </div>
+      {!isIndexPage && <div className="header-socials">
+        <Socials compact={true}/>
+      </div>}
     </header>
   )
 }

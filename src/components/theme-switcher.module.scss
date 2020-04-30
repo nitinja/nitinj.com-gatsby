@@ -1,0 +1,60 @@
+.theme-switcher {
+  width: 4rem;
+  height: 1.6rem;
+  border-radius: 28px;;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: content-box;
+  color: var(--foreground);
+  cursor: pointer;
+  opacity: 0.4;
+  transition: all 0.2s ease-in-out;
+
+  &:hover{
+    opacity: 1;
+  }
+
+  svg {
+    height: 1rem;
+    width: 1.5rem;
+    z-index: 2;
+  }
+  
+  .switch {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.7);
+    &-light-theme {
+      left: 0;
+    }
+    &-dark-theme {
+      left: 2.5rem;
+    }
+  }
+  &-light-theme {
+    background-image: linear-gradient(
+      90deg,
+      hsla(33, 100, 53, 1) 0%,
+      hsla(58, 100, 68, 1) 100%
+    );
+  }
+  &-dark-theme {
+    position: absolute;
+    background-image: linear-gradient(
+      90deg,
+      hsla(205, 46, 30, 1) 0%,
+      hsla(260, 29, 36, 1) 100%
+      );
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.switcher-border {
+  border:1px solid var(--foreground);
+  margin-top: 1rem;
+}

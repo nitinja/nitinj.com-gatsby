@@ -29,6 +29,7 @@ const BlogList = () => {
     <Layout>
       <SEO title="Fullstack Development Blog" />
       <h1>Blog Posts</h1>
+      <div > My blog posts are also vailable on <a target="_blank" style={{marginRight:4}} href="https://medium.com/@nitinj">Medium</a> and <a target="_blank" href="https://dev.to/nitinja">Dev.to</a> </div>
       <ul className={bloglistStyles.posts}>
         {allMarkdownRemark.edges.map(({ node }) => (
           <li className={bloglistStyles.post} key={node.fields.slug}>

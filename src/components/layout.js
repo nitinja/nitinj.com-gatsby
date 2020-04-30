@@ -12,11 +12,15 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 
+// import "../styles/mini-reset.scss"
 import "../styles/global.scss"
 import styles from "./layout.module.scss"
 import { ThemeSwitcher } from "./theme-switcher"
 
-const Layout = ({ children }) => {
+require("typeface-libre-baskerville")
+
+
+const Layout = ({ children, isIndexPage }) => {
   useEffect(() => {}, [])
   const { site } = useStaticQuery(graphql`
     query siteQuery {
@@ -31,7 +35,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className={`grid ${styles.container}`}>
-      <Header siteTitle={site.siteMetadata.title}/>
+      <Header siteTitle={site.siteMetadata.title} isIndexPage={isIndexPage}/>
       <div className={styles.themeSwitcher}>
         <ThemeSwitcher />
       </div>

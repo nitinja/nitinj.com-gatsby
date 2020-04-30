@@ -1,8 +1,10 @@
+// @import './mini-reset.scss';
+
 html {
   // --gradDark: hsl(144, 100%, 89%);
   // --gradLight: hsl(42, 94%, 76%);
   // background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
-  --headerFontFamily: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif';
+  --headerFontFamily: "Libre Baskerville", "Georgia", "Times New Roman", Times, serif;
   --bodyFontFamily: "-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Helvetica","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   --warning:rgba(254, 215, 102, 1);
   --error: #db7f8e;
@@ -11,16 +13,19 @@ html {
 .light {
   --accent-dark: #08a8e6;
   --accent-light: #7CCDF4;
+  --accent-lighter: #7ccdf452;
   --foreground: rgb(52, 73, 94);
+  --foreground-light: rgb(94, 128, 163);
   --background: rgb(248, 248, 248);
   --light-grey:#C5C6C6;
   --medium-grey: #B2B0B0;
-  --dark-grey: #9B9C9B
+  --dark-grey: #9b9c9b
 }
 .dark {
   --accent-dark: #08a8e6;
   --accent-light: #7CCDF4;
   --foreground: rgb(248, 248, 248);
+  --foreground-light: rgb(172, 203, 233);
   --background: rgb(52, 73, 94);
   --light-grey:#C5C6C6;
   --medium-grey: #B2B0B0;
@@ -31,6 +36,24 @@ body {
     background-color: var(--background);
     color: var(--foreground);
     transition: all 0.4s ease-in-out;
+    font-family: var(--bodyFontFamily);
+}
+
+// h1, h2, h3, h4, h5,h6, header {
+//   font-family: var(--headerFontFamily);
+// }
+
+a {
+  color: var(--foreground-light)
+}
+
+a:hover {
+  color: var(--accent-dark)
+}
+
+img {
+  max-width: unset;
+  margin-bottom: auto;
 }
 
 .main-logo {
@@ -51,26 +74,31 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-.button {
-  background-color:none;
+/* Basic HTML Styling */
+.button__primary {
+  background-color: var(--accent-dark);
   border:2px solid var(--primary);
-  color: var(--primary);
+  color: var(--background);
   padding:6px 12px;
-  border-radius: 20px;
-  box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px var(--light-grey);
   display:inline-block;
 }
-.button:hover {
+
+.button__primary:hover {
   color:#222;
   background-color: var(--primary)
 }
 
 input, textarea {
-  background-color: rgba(255,255,255,0.05);
-  padding:10px 16px;
-  border-radius:20px;
-  border:2px solid #9893D8;
-  color:#f2f2f2;
+  padding:8px 12px;
+  border-radius:4px;
+  border:2px solid var(--foreground-light);
+  color:var(--foreground);
+}
+input:focus, textarea:focus {
+  outline: 3px solid var(--accent-lighter);
+  outline-offset: -1px;
 }
 
 
