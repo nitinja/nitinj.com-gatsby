@@ -1,11 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import styles from "./index.module.scss"
 import Socials from "../components/socials"
-
 
 const IndexPage = ({ location }) => (
   <Layout isIndexPage={location.pathname === "/"}>
@@ -20,7 +18,7 @@ const IndexPage = ({ location }) => (
       <h2 className={styles.line}>
         I <Link to="/bloglist/">write</Link> about Frontend Development.
       </h2>
-      <Socials />
+      <Socials className={styles.indexPageSocials}/>
     </div>
   </Layout>
 )

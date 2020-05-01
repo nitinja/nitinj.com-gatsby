@@ -33,7 +33,6 @@ const BlogList = () => {
       <ul className={bloglistStyles.posts}>
         {allMarkdownRemark.edges.map(({ node }) => (
           <li className={bloglistStyles.post} key={node.fields.slug}>
-            {/* {JSON.stringify(node)} */}
             <Link to={`/blog/${node.fields.slug}`}>
               <h3>{node.frontmatter.title}</h3>
             </Link>

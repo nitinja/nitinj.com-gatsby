@@ -1,12 +1,10 @@
 /* Mobile styles */
 
 .footer {
-  /* margin-top: 3rem; */
   grid-column: span 12;
   grid-row: 3/4;
   font-size: 0.8rem;
   font-style: italic;
-  // border-top: 1px solid var(--accent-light);
   display: flex;
   align-content: center;
   justify-content: center;
@@ -20,11 +18,10 @@
 /* Large tablets and laptops */
 @media screen and (min-width: 960px) {
   .footer {
-    /* margin-top: 3rem; */
     grid-column: 1/4;
     grid-row: 3/4;
     text-align: center;
-    border-right: 1px solid var(--accent-light);
+    border-right:1px dashed var(--light-grey);
     flex-direction: column;
   }
 }

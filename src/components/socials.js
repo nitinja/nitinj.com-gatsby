@@ -7,43 +7,44 @@ import {
   RiLinkedinBoxLine,
   RiMediumLine,
 } from "react-icons/ri"
-import styles from "./socials.module.scss"
 
-export default function Socials({compact}) {
+export default function Socials({ className }) {
   return (
-    <div className={`${styles.socials} ${compact ? styles.compact : ''}`}>
-      <a target="_blank" href="https://twitter.com/codenitin" title="Twitter">
+    <div className={className}>
+      <a target="_blank" href="https://twitter.com/codenitin" title="Twitter profile">
         <RiTwitterLine />
-        <div>Twitter</div>
+        <caption>Twitter</caption>
       </a>
       <a
         target="_blank"
         href="https://www.linkedin.com/in/nitin-jadhav-23927aa/"
+        title="LinkedIn Profile"
       >
         <RiLinkedinBoxLine />
-        <div>LinkedIn</div>
+        <caption>LinkedIn</caption>
       </a>
 
-      <a target="_blank" href="https://github.com/nitinja">
+      <a target="_blank" href="https://github.com/nitinja" title="GitHub Profile">
         <RiGithubLine />
-        <div>Github</div>
+        <caption>Github</caption>
       </a>
 
-      <a target="_blank" href="https://www.instagram.com/nitinjadhav466/">
+      <a target="_blank" href="https://www.instagram.com/nitinjadhav466/" title="Instagram Profile">
         <RiInstagramLine />
-        <div>Instagram</div>
+        <caption>Instagram</caption>
       </a>
 
-      <a target="_blank" href="https://medium.com/@nitinj">
+      <a target="_blank" href="https://medium.com/@nitinj" title="Medium Blog">
         <RiMediumLine />
-        <div>Medium</div>
+        <caption>Medium</caption>
       </a>
       <a
         target="_blank"
         href="https://stackoverflow.com/users/741251/nitin-jadhav"
+        title="Stackoverflow Profile"
       >
         <RiStackOverflowLine />
-        <div>StackOverflow</div>
+        <caption>Stack Overflow</caption>
       </a>
     </div>
   )

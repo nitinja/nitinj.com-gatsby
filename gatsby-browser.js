@@ -4,10 +4,17 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
-
 require("prismjs/themes/prism.css")
-// gatsby-browser.js
-// require("prismjs/plugins/line-numbers/prism-line-numbers.css")
-// // gatsby-browser.js
-// require("prismjs/plugins/command-line/prism-command-line.css")
+
+exports.onClientEntry = function() {
+  //One-time, independent code. Set theme if not present in local storage and also in body class
+  const currentTheme = localStorage.getItem("theme")
+  const initialTheme = currentTheme || "light"
+  document.body.classList.add(initialTheme)
+  if (!currentTheme) {
+    localStorage.setItem("theme", initialTheme)
+  }
+  /* Set inverted Theme */
+  const invertedTheme = initialTheme === "light" ? "dark" : "light"
+  localStorage.setItem("invertedTheme", invertedTheme)
+}

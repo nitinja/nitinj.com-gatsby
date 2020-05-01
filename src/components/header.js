@@ -1,70 +1,76 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useCallback } from "react"
+import React, { useCallback, useRef } from "react"
 import styles from "./header.module.scss"
 import { ThemeSwitcher } from "./theme-switcher"
 import Logo from "./logo"
-import {RiMenuLine} from 'react-icons/ri'
-import Mandala from '../images/mandala.svg'
+import { RiMenuLine, RiCloseLine } from "react-icons/ri"
+import Mandala from "../images/mandala.svg"
 import Socials from "./socials"
 
-const Header = ({isIndexPage, siteTitle}) => {
+const Header = ({ isIndexPage }) => {
+  const mobileMenuRef = useRef()
+  //TODO should we use context here?
+  const mobileMenuThemeClass = localStorage.getItem("invertedTheme")
+  const openMobileMenu = () => {
+    console.log("open menu")
+    mobileMenuRef.current.classList.remove(styles.mobileMenuClosed)
+    mobileMenuRef.current.classList.add(styles.mobileMenuOpen)
+  }
+  const closeMobileMenu = () => {
+    console.log("close menu")
+    mobileMenuRef.current.classList.remove(styles.mobileMenuOpen)
+    mobileMenuRef.current.classList.add(styles.mobileMenuClosed)
+  }
   return (
     <header className={styles.header}>
-      
-        <Link to="/" className={styles.title}>
-          {/* {siteTitle} */}
-          <Logo />
-          <img src={Mandala} className={styles.mandala} />
-        </Link>
+      <Link to="/" className={styles.title}>
+        <Logo />
+        <img src={Mandala} className={styles.mandala} />
+      </Link>
 
-        {!isIndexPage && <div className={styles.subtitle}>
-          Hello, I am Nitin Jadhav, <br/>Front-end Developer Architect
-        </div>} 
-     
+      {!isIndexPage && (
+        <div className={styles.subtitle}>
+          Hello, I am Nitin Jadhav, <br />
+          Front-end Developer Architect
+        </div>
+      )}
+
       <div className={styles.menu}>
-        <ul className={styles.navList}>
-
-          {/* <li>
-
-            <Link
-              className={styles.navItem}
-              activeClassName={styles.active}
-              to="/work/"
-            >
-              Work
-            </Link>
-          </li> */}
-          <li>
-            <Link
-              className={styles.navItem}
-              activeClassName={styles.active}
-              to="/bloglist/"
-            >
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={styles.navItem}
-              activeClassName={styles.active}
-              to="/about/"
-            >
-              About
-            </Link>
-          </li>
-         
-          <li className={styles.inmenuThemeSwitcher}>
-            <ThemeSwitcher />
-          </li>
-        </ul>
+        <Menu />
+        <hr />
+        {!isIndexPage && <Socials className={styles.mainMenuSocials} />}
+        <div className={styles.themeSwitcher}>
+          <ThemeSwitcher />
+        </div>
       </div>
+
+      {/* Mobile Menu container */}
+      <div
+        ref={mobileMenuRef}
+        className={`${mobileMenuThemeClass} ${styles.mobileMenu} ${styles.mobileMenuClosed}`}
+      >
+        <a
+          href="#"
+          className={styles.menuCloseButton}
+          onClick={closeMobileMenu}
+        >
+          <RiCloseLine size="2rem" />
+        </a>
+        <div className={styles.inMenuThemeSwitcher}>
+          <ThemeSwitcher />
+        </div>
+        <hr/>
+        <Menu />
+        <hr/>
+        {!isIndexPage && <Socials className={styles.mainMenuSocials} />}
+      </div>
+      {/* Mobile Menu trigger icon */}
       <div className={styles.menuHamburgerIcon}>
-       <RiMenuLine size="2rem"/>
+        <a href="#" onClick={openMobileMenu}>
+          <RiMenuLine size="2rem" />
+        </a>
       </div>
-      {!isIndexPage && <div className="header-socials">
-        <Socials compact={true}/>
-      </div>}
     </header>
   )
 }
@@ -78,3 +84,37 @@ Header.defaultProps = {
 }
 
 export default Header
+
+function Menu({}) {
+  return (
+    <ul className={styles.navList}>
+      {/* <li>
+      <Link
+       className={styles.navItem}
+       activeClassName={styles.active}
+       to="/work/"
+     >
+       Work
+     </Link>
+    </li> */}
+      <li>
+        <Link
+          className={styles.navItem}
+          activeClassName={styles.active}
+          to="/bloglist/"
+        >
+          Blog
+        </Link>
+      </li>
+      <li>
+        <Link
+          className={styles.navItem}
+          activeClassName={styles.active}
+          to="/about/"
+        >
+          About
+        </Link>
+      </li>
+    </ul>
+  )
+}

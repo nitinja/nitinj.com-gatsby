@@ -21,11 +21,6 @@
 
 /* Large tablets and laptops */
 @media screen and (min-width: 960px){
-    .theme-switcher {
-        display: block;
-        grid-column: 11/13;
-        grid-row: 1/2;
-    }
     .main {
         grid-row: 2/3;
         grid-column: 4/13;
