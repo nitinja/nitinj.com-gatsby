@@ -1,4 +1,5 @@
 .home-page{
+    margin-top: 4rem;
     .line {
         font-family: var(--headerFontFamily);
         font-size: 1.5rem;
@@ -8,7 +9,7 @@
 
 .indexPageSocials {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 4rem;
     a {
@@ -16,6 +17,7 @@
         flex-direction: column;
         align-items: center;
         transition: all 0.2s ease-in-out;
+        padding: 1rem;
     }
     svg {
         width:2rem;

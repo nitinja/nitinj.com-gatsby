@@ -6,7 +6,7 @@ import { RiSunLine } from "react-icons/ri"
 
 export function ThemeSwitcher() {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem("theme") || "light"
+    return  typeof window !== 'undefined' ? localStorage.getItem("theme") || "light" : "light"
   })
 
   //TODO: useEffect for local storage and css class updates
