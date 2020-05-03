@@ -106,7 +106,7 @@
     width: 1.6rem;
     height: 1.6rem;
   }
-  caption {
+  span {
     display: none;
   }
 }
@@ -114,7 +114,7 @@
 .mandala {
   opacity: 0.4;
   transition: opacity 0.3s ease-in-out;
-  animation: mandala-rotate 80s linear 0s infinite;
+  animation: mandala-rotate 120s linear 0s infinite;
 }
 
 .mandala:hover {

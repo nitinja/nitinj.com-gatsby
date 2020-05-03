@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { convertDateToRedableFormat } from "../utils/Dates"
+import styles from './blog.module.scss'
 
 export const query = graphql`
   query($slug: String!) {
@@ -19,8 +21,8 @@ export const query = graphql`
 const BlogPage = ({data}) => (
   <Layout>
     <SEO title={data.markdownRemark.frontmatter.title} />
-    <h1>{data.markdownRemark.frontmatter.title}</h1>
-    <p>{data.markdownRemark.frontmatter.date}</p>
+    <h1 className={styles.postHeader}>{data.markdownRemark.frontmatter.title}</h1>
+    <sub className={styles.postDate}>{convertDateToRedableFormat(data.markdownRemark.frontmatter.date)}</sub>
     <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}></div>
   </Layout>
 )

@@ -1,0 +1,58 @@
+---
+title: 'Form Textboxes and Placeholders: Best Practices'
+description: >-
+  Here are some tips that I learned from my experience for beginners to use text
+  boxes and placeholders correctly like a pro.
+date: ''
+categories: []
+keywords: []
+slug: ''
+---
+
+Here are some tips that I learned from my experience for beginners to use text boxes and placeholders correctly like a pro.
+
+1.  Use both field label **and** descriptive or example placeholder. Only using placeholders are bad for [several reasons](https://www.nngroup.com/articles/form-design-placeholders/).
+
+![](img\1__fnlM2VqjSNpOCs3gxDHiqA.png)
+
+2\. Placeholders should be clearly visible. By default, browsers do not show placeholder text with a good contrast ratio. _::placeholder_ CSS pseudo-class is useful for styling it and making it more visible.
+
+![](img\1__C2aLvTekjEfSXYa____iz__5Q.png)
+
+3\. Use helpful hints in addition to placeholders, not as a placeholder. Hints should be visible all the time to the user, especially when the user enters incorrect input. **Label+example as a placeholder+helpful hint is the most usable combo.**
+
+![](img\1__NxKGQaoyNKne0JpSW4Yb8Q.png)
+
+4\. Instead of allowing the user to enter everything and then spitting error when he/she enters non-desirable input, Restrict user to only allowed input type. Html5 input types (number, range etc) are helpful in this matter.
+
+![](img\1__hwuKqRHN4ebHXbpq7Fiq__Q.png)
+
+5\. Format structured input types (e.g. Credit card and telephone numbers, currency values) as the user is typing. Unformatted inputs in such cases are not very usable in such cases. You may use libraries like [Cleave.js](https://nosir.github.io/cleave.js/) for this purpose.
+
+![](img\1__UYDFdHtImiTVzgl2__Q3Qgw.png)
+
+6\. Password Revealing is useful for some users. Especially older, skeptic users, users who want to re-learn their browser-saved passwords.
+
+![](img\1__9ADGWG1KOVqcyr__VlDWNQA.gif)
+
+7\. Instead of showing units in the label or left/right to the field, show units right inside the field. Super intuitive and beautiful.
+
+![](img\1__t0cvL46MZNlimlHF9vT5OA.png)
+
+8\. Adding a 📞 phone number? Many people may not recall ISD code for there country. The best pattern here is country code-selector with the formatted phone number. An [example](https://intl-tel-input.com/) is this react library.
+
+![](img\1__S7xhCwQlvd6x3CDOYS7Qzw.gif)
+
+9\. Adding large text areas? Use expands-as-you-type textures. Save space and avoid user scrolling.
+
+![“Marie kondo” that textarea](img\1__jaEPT0iKM3qrgnGBsH5qTA.gif)
+“Marie kondo” that textarea
+
+10\. Search field? It's crucial that you get all of the following things right.
+
+Search field must have 
+
+*   Clearly labeled “Search” for “Find” button following textbox
+*   A “delete text” ⊗ button
+*   Loading indicator in case of async search results
+*   A dropdown showing recent or top searches

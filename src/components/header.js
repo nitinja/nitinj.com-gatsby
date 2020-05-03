@@ -25,7 +25,7 @@ const Header = ({ isIndexPage }) => {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.title}>
-        <Logo />
+        {/* <Logo /> */}
         <img src={Mandala} className={styles.mandala} />
       </Link>
 

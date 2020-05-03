@@ -5,20 +5,17 @@
 
 .post {
     margin: 1rem 0;
-    background-color: #f4f4f4;
-    padding:4px;
+    background-color: rgba(255,255,255, 0.03);
+    border-radius: 4px;
+    padding:1rem;
     a {
-        color:#000000;
-    }
-    a:hover {
-        color:rgb(91, 84, 104);
+        text-decoration: none;
     }
 
     h2 {
         margin-bottom: 0;
     }
     p{
-        color: #777777;
         font-size: 0.8rem;
         font-style: italic;
     }

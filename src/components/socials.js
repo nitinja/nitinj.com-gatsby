@@ -13,7 +13,7 @@ export default function Socials({ className }) {
     <div className={className}>
       <a target="_blank" href="https://twitter.com/codenitin" title="Twitter profile">
         <RiTwitterLine />
-        <caption>Twitter</caption>
+        <span>Twitter</span>
       </a>
       <a
         target="_blank"
@@ -21,22 +21,22 @@ export default function Socials({ className }) {
         title="LinkedIn Profile"
       >
         <RiLinkedinBoxLine />
-        <caption>LinkedIn</caption>
+        <span>LinkedIn</span>
       </a>
 
       <a target="_blank" href="https://github.com/nitinja" title="GitHub Profile">
         <RiGithubLine />
-        <caption>Github</caption>
+        <span>Github</span>
       </a>
 
       <a target="_blank" href="https://www.instagram.com/nitinjadhav466/" title="Instagram Profile">
         <RiInstagramLine />
-        <caption>Instagram</caption>
+        <span>Instagram</span>
       </a>
 
       <a target="_blank" href="https://medium.com/@nitinj" title="Medium Blog">
         <RiMediumLine />
-        <caption>Medium</caption>
+        <span>Medium</span>
       </a>
       <a
         target="_blank"
@@ -44,7 +44,7 @@ export default function Socials({ className }) {
         title="Stackoverflow Profile"
       >
         <RiStackOverflowLine />
-        <caption>Stack Overflow</caption>
+        <span>Stack Overflow</span>
       </a>
     </div>
   )
