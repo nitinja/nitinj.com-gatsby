@@ -13,7 +13,7 @@ Tailwind CSS has reduced my style-development time to half. It’s amazing and s
 
 Tailwind CSS is a utility first CSS framework that enables rapid CSS development — it’s basically a set of CSS classes that we can apply on HTML tags to get results and try things quickly. I am sure you have used bootstrap at some point of time and you know for responsiveness, bootstrap has classes like row, _col_ and _col-lg-2_. Apply and forget.
 
-```
+```html
 <div class="container">  <div class="row justify-content-md-center">    <div class="col col-lg-2">      1 of 3    </div>    <div class="col-md-auto">      Variable width content    </div>    <div class="col col-lg-2">      3 of 3    </div>  </div></div>
 ```
 
@@ -52,6 +52,7 @@ All this combined gives us a rapid UI Style development toolkit that enables exc
 
 First, you have to write a tailwind configuration file. You can add all type of things like font sizes and rounded borders. It looks like this:
 
+```js
 let colors = {
 
 black: "#22292f",
@@ -99,6 +100,7 @@ px: "1px",
 "8": "2rem"
 
 }
+```
 
 // and many, many more things like these
 

@@ -28,7 +28,7 @@ npm init -y
 
 *   Create index.html file in this directory with some content
 
-```
+```html
 <html><body>  <script src="./index.js"></script></body></html>
 ```
 
@@ -38,7 +38,7 @@ console.log("js here");
 
 *   Add parcel to the mix
 
-```
+```bash
 npm install -g parcel-bundler
 ```
 
@@ -52,7 +52,7 @@ This will start a hot-reload web server and open index.html in the browser.
 
 *   Add SASS to project
 
-```
+```bash
 npm install sass --save-dev
 ```
 
@@ -72,6 +72,7 @@ npm install posthtml-include --save-dev
 
 …and create a **.posthtmlrc.js** in the project root directory with content:
 
+```json
 module.exports = {  
   plugins: {  
     "posthtml-include": {  
@@ -79,6 +80,7 @@ module.exports = {
     }  
   }  
 };
+```
 
 *   For optimized production bundle, run
 

@@ -30,7 +30,7 @@ const About = () => (
       </p>
       <p>
         Here is my{" "}
-        <a title="Download my Resume" href="/Resume-Nitin-Jadhav-Frontend.pdf">
+        <a title="Download my Resume" target="_blank" href="/Resume-Nitin-Jadhav-Frontend.pdf">
           Resume.
         </a>
       </p>
@@ -38,7 +38,7 @@ const About = () => (
     </div>
     <h1>Contact</h1>
     <div style={{ padding: "1rem 2em" }}>
-      <form name="contact" class={styles.contactForm} netlify>
+      <form name="contact" className={styles.contactForm} netlify>
         <input name="email" type="email" placeholder="Your Email" />
         <textarea
           style={{ height: "4rem" }}

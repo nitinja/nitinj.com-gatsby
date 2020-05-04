@@ -36,6 +36,9 @@ const Layout = ({ children, isIndexPage }) => {
     <div className={`grid ${styles.container}`}>
       <Header siteTitle={site.siteMetadata.title} isIndexPage={isIndexPage}/>
       <main className={styles.main}>{children}</main>
+      <section className="soFlair" >
+        
+      </section>
       <Footer author={site.siteMetadata.author} />
     </div>
   )

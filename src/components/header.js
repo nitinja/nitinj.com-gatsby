@@ -11,7 +11,10 @@ import Socials from "./socials"
 const Header = ({ isIndexPage }) => {
   const mobileMenuRef = useRef()
   //TODO should we use context here?
-  const mobileMenuThemeClass =  typeof window !== 'undefined' ? localStorage.getItem("invertedTheme"): 'light'
+  const mobileMenuThemeClass =
+    typeof window !== "undefined"
+      ? localStorage.getItem("invertedTheme")
+      : "light"
   const openMobileMenu = () => {
     console.log("open menu")
     mobileMenuRef.current.classList.remove(styles.mobileMenuClosed)
@@ -60,9 +63,9 @@ const Header = ({ isIndexPage }) => {
         <div className={styles.inMenuThemeSwitcher}>
           <ThemeSwitcher />
         </div>
-        <hr/>
+        <hr />
         <Menu />
-        <hr/>
+        <hr />
         {!isIndexPage && <Socials className={styles.mainMenuSocials} />}
       </div>
       {/* Mobile Menu trigger icon */}

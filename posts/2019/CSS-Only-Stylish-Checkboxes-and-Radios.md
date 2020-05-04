@@ -22,79 +22,83 @@ It's easy:
 
 Create a plain checkbox in this format:
 
-<**div class='example'** \>  
-    <**input type='checkbox' id='my-checkbox'** \>  
-    <**label for='my-checkbox'** \>My Checkbox</**label** \>  
-</**div** \>  
-<**div class='example'** \>  
-    <**input type='radio' name='radio-group-1' id='my-radio1'** \>  
-    <**label for='my-radio1'** \>My Radio 1</**label** \>  
-    <**input type='radio' name='radio-group-1' id='my-radio2'** \>  
-    <**label for='my-radio2'** \>My Radio 1</**label** \>  
-</**div** \>
+```html
+<div class='example'>  
+    <input type='checkbox' id='my-checkbox' >  
+    <label for='my-checkbox' >My Checkbox</label >  
+</div >  
+<div class='example' >  
+    <input type='radio' name='radio-group-1' id='my-radio1' >  
+    <label for='my-radio1' >My Radio 1</label >  
+    <input type='radio' name='radio-group-1' id='my-radio2' >  
+    <label for='my-radio2' >My Radio 1</label >  
+</div >
+```
 
 ![regular checkbox and radio buttons](img\1__iv3puCn6maIPkuCtqWRq1Q.png)
 regular checkbox and radio buttons
 
 Apply following CSS styles. I have added comments with each style, it should be self explanatory.
 
-_/\* Hide the checkbox/radio. We will simulate it later using label \*/  
-_**input**\[**type**\=**checkbox**\], **input**\[**type**\=**radio**\] {  
-    **opacity**: 0;  
-    **position**: **absolute**;  
-}  
-  
-_/\* Some basic styling for alignment and more \*/  
-_**input**\[**type**\=**checkbox**\], **input**\[**type**\=**checkbox**\] + **label**, **input**\[**type**\=**radio**\], **input**\[**type**\=**radio**\] + **label** {  
-    **display**: **inline-block**;  
-    **vertical-align**: **middle**;  
-    **cursor**: **pointer**;  
-    **user-select**: **none**;  
-}  
-  
-_/\* CSS Pseudo class "before" to show checkbox/radio box. Will be attached to every label adjacent to input checkbox.\*/  
-_**input**\[**type**\=**checkbox**\] + **label**:**before**, **input**\[**type**\=**radio**\] + **label**:**before** {  
-    **font-family**: **'FontAwesome'**;  
-    **background**: **#f1fff6**;  
-    **display**: **inline-block**;  
-    **vertical-align**: **middle**;  
-    **width**: 20**px**;  
-    **margin-right**: 10**px**;  
-    **text-align**: **center**;  
-    **font-size**: 12**px**;  
-    **padding**: 4**px** 0;  
-    **color**: **#e4efe5**;  
-    **transition**: **color** .4**s**;  
-    **border**: 1**px solid #3faf2d**;  
-}  
-  
-_/\* Tick inside checkbox. I am using Font-awesome's tick, but you can use plain unicode tick \*/  
-/\* or any other symbol you want. \*/  
-_**input**\[**type**\=**checkbox**\] + **label**:**before** {  
-    **content**: **'\\f00c'**;  
-    **border-radius**: 2**px**;  
-}  
-  
-_/\* Circle inside radio circle. Border-radius to make it a circle. \*/  
-_**input**\[**type**\=**radio**\] + **label**:**before** {  
-    **content**: **'\\f111'**;  
-    **border-radius**: 50%;  
-}  
-  
-_/\* Styles when checkbox/radio is checked \*/  
-_**input**:**checked** \+ **label**:**before** {  
-    **background**: **#288619**;  
-    **color**: **#FFF**;  
-}  
-  
-_/\* Styles when checkbox/radio is disabled  \*/  
-_**input**\[**type**\=**checkbox**\]\[**disabled**\] + **label**:**before**, **input**\[**type**\=**radio**\]\[**disabled**\] + **label**:**before** {  
-    **color**: **#d0d0d0**;  
-    **background**: **#bfbfbf**;  
-    **border**: 1**px solid #656b64**;  
-}
-
 Here is full example:
+
+```css
+/* Hide the checkbox/radio. We will simulate it later using label */  
+input[type=checkbox], input[type=radio] {  
+    opacity: 0;  
+    position: absolute;  
+}  
+  
+/* Some basic styling for alignment and more */  
+input[type=checkbox], input[type=checkbox] + label, input[type=radio], input[type=radio] + label {  
+    display: inline-block;  
+    vertical-align: middle;  
+    cursor: pointer;  
+    user-select: none;  
+}  
+  
+/* CSS Pseudo class "before" to show checkbox/radio box. Will be attached to every label adjacent to input checkbox.*/  
+input[type=checkbox] + label:before, input[type=radio] + label:before {  
+    font-family: 'FontAwesome';  
+    background: #f1fff6;  
+    display: inline-block;  
+    vertical-align: middle;  
+    width: 20px;  
+    margin-right: 10px;  
+    text-align: center;  
+    font-size: 12px;  
+    padding: 4px 0;  
+    color: #e4efe5;  
+    transition: color .4s;  
+    border: 1px solid #3faf2d;  
+}  
+  
+/* Tick inside checkbox. I am using Font-awesome's tick, but you can use plain unicode tick */  
+/* or any other symbol you want. */  
+input[type=checkbox] + label:before {  
+    content: '\\f00c';  
+    border-radius: 2px;  
+}  
+  
+/* Circle inside radio circle. Border-radius to make it a circle. */  
+input[type=radio] + label:before {  
+    content: '\\f111';  
+    border-radius: 50%;  
+}  
+  
+/* Styles when checkbox/radio is checked */  
+input:checked \+ label:before {  
+    background: #288619;  
+    color: #FFF;  
+}  
+  
+/* Styles when checkbox/radio is disabled  */  
+input[type=checkbox][disabled] + label:before, input[type=radio][disabled] + label:before {  
+    color: #d0d0d0;  
+    background: #bfbfbf;  
+    border: 1px solid #656b64;  
+}
+```
 
 It works with most modern browsers, including IE9+ (tested in IE11, but should work in IE9)
 

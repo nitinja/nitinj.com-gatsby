@@ -81,23 +81,23 @@ hr {
 /* Basic HTML Styling */
 .button__primary {
   background-color: var(--accent-dark);
-  border:2px solid var(--primary);
-  color: var(--background);
-  padding:6px 12px;
+  border: 0;
+  color: var( --yellowish);
+  padding: 6px 12px;
   border-radius: 2px;
-  box-shadow: 1px 1px 1px var(--light-grey);
-  display:inline-block;
+  display: inline-block;
 }
 
 .button__primary:hover {
-  color:#222;
-  background-color: var(--primary)
+  color:var(--whiteish);
+  background-color: var(--accent-light)
 }
 
 input, textarea {
   padding:8px 12px;
   border-radius:4px;
-  border:2px solid var(--foreground-alt);
+  border:2px solid var(--accent-dark);
+  background-color: var(--background-alt);
   color:var(--foreground);
 }
 input:focus, textarea:focus {
