@@ -34,11 +34,14 @@ const BlogList = () => {
   //we only need posts with published date. Otherwise its a draft.
   const nodes = allMarkdownRemark.edges.map(edge => edge.node).filter(node => node?.frontmatter?.date);
 
+  // debugger
+  // console.log("nodes--: ",nodes.map(node => node.frontmatter.date));
+  
   return (
     <Layout>
       <SEO title="Fullstack Development Blog" />
       <h1>Blog Posts</h1>
-      <div > My blog posts are also vailable on <a target="_blank" style={{marginRight:4}} href="https://medium.com/@nitinj">Medium</a> and <a target="_blank" href="https://dev.to/nitinja">Dev.to</a> </div>
+      <div > My blog posts are also vailable on <a target="_blank" rel="noopener noreferrer" style={{marginRight:4}} href="https://medium.com/@nitinj">Medium</a> and <a target="_blank" rel="noopener noreferrer" href="https://dev.to/nitinja">Dev.to</a> </div>
       <ul className={bloglistStyles.posts}>
         {nodes.map((node) => (
           <li className={bloglistStyles.post} key={node.fields.slug}>

@@ -1,9 +1,8 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useCallback, useRef } from "react"
+import React, { useRef } from "react"
 import styles from "./header.module.scss"
 import { ThemeSwitcher } from "./theme-switcher"
-import Logo from "./logo"
 import { RiMenuLine, RiCloseLine } from "react-icons/ri"
 import Mandala from "../images/mandala.svg"
 import Socials from "./socials"
@@ -16,12 +15,10 @@ const Header = ({ isIndexPage }) => {
       ? localStorage.getItem("invertedTheme")
       : "light"
   const openMobileMenu = () => {
-    console.log("open menu")
     mobileMenuRef.current.classList.remove(styles.mobileMenuClosed)
     mobileMenuRef.current.classList.add(styles.mobileMenuOpen)
   }
   const closeMobileMenu = () => {
-    console.log("close menu")
     mobileMenuRef.current.classList.remove(styles.mobileMenuOpen)
     mobileMenuRef.current.classList.add(styles.mobileMenuClosed)
   }
@@ -29,7 +26,7 @@ const Header = ({ isIndexPage }) => {
     <header className={styles.header}>
       <Link to="/" className={styles.title}>
         {/* <Logo /> */}
-        <img src={Mandala} className={styles.mandala} />
+        <img src={Mandala} alt="logo mandala" className={styles.mandala} />
       </Link>
 
       {!isIndexPage && (

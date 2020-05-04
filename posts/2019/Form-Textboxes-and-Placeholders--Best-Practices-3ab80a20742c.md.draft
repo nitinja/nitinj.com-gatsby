@@ -15,7 +15,7 @@ Here are some tips that I learned from my experience for beginners to use text b
 
 ![](img\1__fnlM2VqjSNpOCs3gxDHiqA.png)
 
-2\. Placeholders should be clearly visible. By default, browsers do not show placeholder text with a good contrast ratio. _::placeholder_ CSS pseudo-class is useful for styling it and making it more visible.
+2\. Placeholders should be clearly visible. By default, browsers do not show placeholder text with a good contrast ratio. _::placeholder_ CSS pseudo-class is   useful for styling it and making it more visible.
 
 ![](img\1__C2aLvTekjEfSXYa____iz__5Q.png)
 

@@ -47,7 +47,6 @@ const About = () => (
         ></textarea>
         <button
           className="button__primary"
-          type="button"
           type="submit"
           id="submitContactButton"
           disabled

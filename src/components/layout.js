@@ -14,7 +14,6 @@ import Footer from "./footer"
 
 import "../styles/global.scss"
 import styles from "./layout.module.scss"
-import { ThemeSwitcher } from "./theme-switcher"
 
 require("typeface-libre-baskerville")
 
@@ -37,7 +36,7 @@ const Layout = ({ children, isIndexPage }) => {
       <Header siteTitle={site.siteMetadata.title} isIndexPage={isIndexPage}/>
       <main className={styles.main}>{children}</main>
       <section className="soFlair" >
-        
+
       </section>
       <Footer author={site.siteMetadata.author} />
     </div>

@@ -1,5 +1,5 @@
 .theme-switcher {
-  width: 4rem;
+  width: 3rem;
   height: 1.6rem;
   border-radius: 28px;;
   display: flex;
@@ -8,6 +8,7 @@
   align-items: center;
   box-sizing: content-box;
   color: var(--foreground);
+  background-color: var(--background);
   cursor: pointer;
   opacity: 0.8;
   transition: all 0.2s ease-in-out;
@@ -18,43 +19,28 @@
 
   svg {
     height: 1rem;
-    width: 1.5rem;
+    width: 1rem;
     z-index: 2;
   }
   
   .switch {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.68rem;
+    height: 1.68rem;
     border-radius: 50%;
     position: absolute;
     transition: all 0.2s ease-in-out;
-    // z-index: -1;
-    background-color: rgba(255, 255, 255, 0.7);
+    border:1px solid var(--foreground);
+    background-color: var(--background-alt);
     &-light-theme {
-      left: 0;
+      left: -1px;
     }
     &-dark-theme {
-      left: 2.5rem;
+      right:0;
     }
-  }
-  &-light-theme {
-    background-image: linear-gradient(
-      90deg,
-      hsla(33, 100, 53, 1) 0%,
-      hsla(58, 100, 68, 1) 100%
-    );
-  }
-  &-dark-theme {
-    position: absolute;
-    background-image: linear-gradient(
-      90deg,
-      hsla(205, 46, 30, 1) 0%,
-      hsla(260, 29, 36, 1) 100%
-      );
-    transition: all 0.2s ease-in-out;
   }
 }
 
 .switcher-border {
   border:1px solid var(--foreground);
 }
+ 

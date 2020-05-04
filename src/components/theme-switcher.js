@@ -25,25 +25,31 @@ export function ThemeSwitcher() {
     const invertedTheme = newTheme === "light" ? "dark" : "light"
     localStorage.setItem("invertedTheme", invertedTheme)
   }, [theme])
+
+  const handleKeyPress = (event) => {
+    debugger
+    console.log("in keypress hand;le");
+    
+    if(event.key === "enter"){
+      toggleSwitch();
+    }
+  }
   
   const iconsColor = theme === 'light' ? '#000' : '#fff';
   return (
-    <div
-      className={`${styles.switcherBorder} ${styles.themeSwitcher} ${styles.themeSwitcherLightTheme}`}
+    <button
+      className={`${styles.switcherBorder} ${styles.themeSwitcher}`}
       onClick={toggleSwitch}
+      onKeyPress={handleKeyPress}
     >
       <RiSunLine color={iconsColor} />
       <RiMoonLine color={iconsColor}/>
       <div
-        className={`${styles.themeSwitcher} ${styles.themeSwitcherDarkTheme}`}
-        style={{ opacity: theme === "light" ? 0 : 1 }}
-      ></div>
-      <div
         className={`${styles.switch} ${
           theme === "light" ? styles.switchLightTheme : styles.switchDarkTheme
         }`}
-        onClick={toggleSwitch}
+       
       ></div>
-    </div>
+    </button>
   )
 }
