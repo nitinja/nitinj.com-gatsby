@@ -1,7 +1,6 @@
 .container {
     margin: 0 auto;
     max-width: 64rem;
-    // padding: 0 1rem;
     min-height: 100vh;
 }
 
@@ -25,7 +24,7 @@
     .main {
         grid-row: 2/3;
         grid-column: 4/13;
-        padding: 1rem 2.5rem;
+        padding: 4rem 2.5rem 2rem 2.5rem;
     }
 }
 

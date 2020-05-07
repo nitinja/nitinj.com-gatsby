@@ -88,15 +88,6 @@ export default Header
 function Menu({}) {
   return (
     <ul className={styles.navList}>
-      {/* <li>
-      <Link
-       className={styles.navItem}
-       activeClassName={styles.active}
-       to="/work/"
-     >
-       Work
-     </Link>
-    </li> */}
       <li>
         <Link
           className={styles.navItem}
@@ -113,6 +104,15 @@ function Menu({}) {
           to="/about/"
         >
           About
+        </Link>
+      </li>
+      <li>
+        <Link
+          className={styles.navItem}
+          activeClassName={styles.active}
+          to="/work/"
+        >
+          Projects
         </Link>
       </li>
     </ul>

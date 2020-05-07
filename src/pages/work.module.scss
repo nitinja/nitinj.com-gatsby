@@ -1,0 +1,29 @@
+.workCardsContainer {
+  padding: 2rem;
+  ul {
+    display:flex;
+  }
+}
+
+.workCard {
+  list-style-type: none;
+  width: 12rem;
+  height: 20rem;
+  padding: 1rem;
+  background: var(--foreground-alt);
+  margin:1rem 2rem;
+  img {
+    width: 100%;
+  }
+  caption {
+    color: var(--background);
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.3rem auto;
+    display: block;
+    
+  }
+  &:hover {
+    opacity:0.90;
+  }
+}

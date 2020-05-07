@@ -1,12 +1,23 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import styles from "./work.module.scss"
+import Tetris from "../images/projects/slick-tetris.png"
 const Work = () => (
   <Layout>
     <SEO title="Work" />
-    <div>
-      my work here
+    <div className={styles.workCardsContainer}>
+      <ul>
+        <li className={styles.workCard}>
+          <a
+            href="https://nitinja.github.io/slick-tetris/"
+            title="Slick tetris Project"
+          >
+            <img src={Tetris} alt="Tetris Project"></img>
+            <caption>Tetris</caption>
+          </a>
+        </li>
+      </ul>
     </div>
   </Layout>
 )
