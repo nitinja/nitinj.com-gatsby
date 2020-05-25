@@ -23,7 +23,7 @@ const BlogPage = ({data}) => (
     <SEO title={data.markdownRemark.frontmatter.title} />
     <h1 className={styles.postHeader}>{data.markdownRemark.frontmatter.title}</h1>
     <sub className={styles.postDate}>{convertDateToRedableFormat(data.markdownRemark.frontmatter.date)}</sub>
-    <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}></div>
+    <div className={styles.blogPostContainer} dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}></div>
   </Layout>
 )
 export default BlogPage

@@ -57,10 +57,6 @@ const Header = ({ isIndexPage }) => {
         >
           <RiCloseLine size="2rem" />
         </a>
-        <div className={styles.inMenuThemeSwitcher}>
-          <ThemeSwitcher />
-        </div>
-        <hr />
         <Menu />
         <hr />
         {!isIndexPage && <Socials className={styles.mainMenuSocials} />}
