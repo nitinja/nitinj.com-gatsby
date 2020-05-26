@@ -88,7 +88,12 @@ hr {
   display: inline-block;
 }
 
-.button__primary:hover {
+
+
+.button__primary:disabled {
+  background-color:var(--light-grey);
+}
+.button__primary:not(:disabled):hover {
   color:var(--whiteish);
   background-color: var(--accent-light)
 }
