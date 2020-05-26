@@ -54,7 +54,13 @@ const About = () => {
       </div>
       <h1>Contact</h1>
       <div style={{ padding: "1rem 2em" }}>
-        <form name="contact" className={styles.contactForm} data-netlify="true">
+      
+      <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
+      <form name="contact-jsx" className={styles.contactForm} data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
           <input name="email" type="email" placeholder="Your Email" onChange={handleEmailChange}/>
           <textarea
             style={{ height: "4rem" }}
