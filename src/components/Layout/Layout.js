@@ -9,14 +9,13 @@ import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import Footer from "./footer"
+import Header from "../Header/Header"
+import Footer from "../Footer/Footer"
 
-import "../styles/global.scss"
-import styles from "./layout.module.scss"
+import "../../styles/global.scss"
+import styles from "./Layout.module.scss"
 
 require("typeface-libre-baskerville")
-
 
 const Layout = ({ children, isIndexPage }) => {
   useEffect(() => {}, [])
@@ -33,15 +32,13 @@ const Layout = ({ children, isIndexPage }) => {
 
   return (
     <div className={`grid ${styles.container}`}>
-      <Header siteTitle={site.siteMetadata.title} isIndexPage={isIndexPage}/>
+      <Header siteTitle={site.siteMetadata.title} isIndexPage={isIndexPage} />
       <main className={styles.main}>{children}</main>
-      <section className="soFlair" >
-
-      </section>
+      <section className="soFlair"></section>
       <Footer author={site.siteMetadata.author} />
     </div>
   )
-} 
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

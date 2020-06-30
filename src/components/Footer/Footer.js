@@ -1,9 +1,11 @@
 import React from "react"
-import footerStyles from './footer.module.scss'
+import footerStyles from "./Footer.module.scss"
 
-const Footer = ({author}) => (
+const Footer = ({ author }) => (
   <footer className={footerStyles.footer}>
-    <div>© {new Date().getFullYear()} {author}</div>
+    <div>
+      © {new Date().getFullYear()} {author}
+    </div>
     <div>Built with React & GatsbyJS</div>
   </footer>
 )

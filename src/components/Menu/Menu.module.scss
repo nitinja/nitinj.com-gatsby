@@ -1,0 +1,59 @@
+@import "../../styles/base";
+
+.nav-list {
+  // width: 100%;
+  // display: flex;
+  // flex-direction: column;
+  list-style-type: none;
+  margin: 2rem 0;
+  text-align: center;
+
+  .nav-item {
+    font-family: var(--headerFontFamily);
+    font-size: 1rem;
+    text-decoration: none;
+    margin-bottom: 1.3rem;
+    transition: all 0.2s ease-in-out;
+  }
+  .nav-item:hover {
+    color: var(--accent-dark);
+  }
+
+  .active {
+    font-weight: bold;
+    color: var(--accent-dark);
+  }
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2rem;
+  color: var(--background);
+  background-color: var(--foreground);
+  color: var(--foreground);
+  border-bottom: 1rem solid var(--foreground-alt);
+  top: -100vh;
+  transition: all 0.2s ease-in-out;
+
+  a {
+    color: var(--background-alt);
+  }
+}
+.mobileMenuOpen {
+  top: 0;
+}
+.menuCloseButton {
+  position: absolute;
+  color: var(--background-alt);
+  right: 2rem;
+  top: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.inMenuThemeSwitcher {
+  display: block;
+  margin-bottom: 2rem;
+}

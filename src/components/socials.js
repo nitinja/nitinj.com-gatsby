@@ -11,7 +11,12 @@ import {
 export default function Socials({ className }) {
   return (
     <div className={className}>
-      <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/codenitin" title="Twitter profile">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://twitter.com/codenitin"
+        title="Twitter profile"
+      >
         <RiTwitterLine />
         <span>Twitter</span>
       </a>
@@ -25,17 +30,32 @@ export default function Socials({ className }) {
         <span>LinkedIn</span>
       </a>
 
-      <a target="_blank" rel="noopener noreferrer" href="https://github.com/nitinja" title="GitHub Profile">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/nitinja"
+        title="GitHub Profile"
+      >
         <RiGithubLine />
         <span>Github</span>
       </a>
 
-      <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/nitinjadhav466/" title="Instagram Profile">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.instagram.com/nitinjadhav466/"
+        title="Instagram Profile"
+      >
         <RiInstagramLine />
         <span>Instagram</span>
       </a>
 
-      <a target="_blank" rel="noopener noreferrer" href="https://medium.com/@nitinj" title="Medium Blog">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://medium.com/@nitinj"
+        title="Medium Blog"
+      >
         <RiMediumLine />
         <span>Medium</span>
       </a>

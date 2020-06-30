@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/Layout/Layout"
 import SEO from "../components/seo"
 import styles from "./index.module.scss"
-import Socials from "../components/socials"
+import Socials from "../components/Socials"
 
 const IndexPage = ({ location }) => (
   <Layout isIndexPage={location.pathname === "/"}>

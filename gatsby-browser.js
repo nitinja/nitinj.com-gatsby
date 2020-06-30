@@ -8,15 +8,12 @@ require("prismjs/themes/prism.css")
 
 exports.onClientEntry = function() {
   //One-time, independent code. Set theme if not present in local storage and also in body class
-  if(typeof window !== 'undefined'){
+  if (typeof window !== "undefined") {
     const currentTheme = localStorage.getItem("theme")
     const initialTheme = currentTheme || "light"
-    document.body.classList.add(initialTheme)
     if (!currentTheme) {
       localStorage.setItem("theme", initialTheme)
     }
-    /* Set inverted Theme */
-    const invertedTheme = initialTheme === "light" ? "dark" : "light"
-    localStorage.setItem("invertedTheme", invertedTheme)
+    document.body.classList.add(initialTheme)
   }
 }

@@ -1,52 +1,23 @@
+@import "./base";
 
-html {
-  --headerFontFamily: "Libre Baskerville", "Georgia", "Times New Roman", Times, serif;
-  --bodyFontFamily: "-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Helvetica","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-
-
-  --dark-blue: #08a8e6;
-  --light-blue: #7CCDF4;
-  --steel-grey-dark: #354a5f;
-  --steel-grey-light: #5e80a3;
-  --whiteish: #f8f8f8;
-  --yellowish: #faf3dd;
-  --light-grey:#C5C6C6;
-  --medium-grey: #B2B0B0;
-  --dark-grey: #9b9c9b;
-
-  /* Default palette */
-  --warning:#fed766;
-  --error: #db7f8e;
-  --accent-dark: var(--dark-blue);
-  --accent-light: var(--light-blue);
+/* Global styles */
+* {
+  box-sizing: border-box;
 }
 
-.light {
-  --foreground: var(--steel-grey-dark);
-  --foreground-alt: var(--steel-grey-light);
-  --background: var(--whiteish);
-  --background-alt: var(--yellowish);
-}
-.dark {
-  --foreground: var(--whiteish);
-  --foreground-alt: var(--yellowish);
-  --background: var(--steel-grey-dark);
-  --background-alt: var(--steel-grey-light);
-}
- 
 body {
-    background-color: var(--background);
-    color: var(--foreground);
-    transition: all 0.4s ease-in-out;
-    font-family: var(--bodyFontFamily);
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: all 0.4s ease-in-out;
+  font-family: var(--bodyFontFamily);
 }
 
 a {
-  color: var(--foreground-alt)
+  color: var(--foreground-alt);
 }
 
 a:hover {
-  color: var(--accent-dark)
+  color: var(--accent-dark);
 }
 
 img {
@@ -60,8 +31,10 @@ hr {
   margin-bottom: 0;
 }
 
+/* Styles for small, independent components which don't have associated css module files */
+
 .main-logo {
-  height:80px;
+  height: 80px;
   width: 80px;
 }
 .light .main-logo-dark {
@@ -82,46 +55,51 @@ hr {
 .button__primary {
   background-color: var(--accent-dark);
   border: 0;
-  color: var( --yellowish);
+  color: var(--yellowish);
   padding: 6px 12px;
   border-radius: 2px;
   display: inline-block;
 }
 
-
-
 .button__primary:disabled {
-  background-color:var(--light-grey);
+  background-color: var(--light-grey);
 }
 .button__primary:not(:disabled):hover {
-  color:var(--whiteish);
-  background-color: var(--accent-light)
+  color: var(--whiteish);
+  background-color: var(--accent-light);
 }
 
-input, textarea {
-  padding:8px 12px;
-  border-radius:4px;
-  border:2px solid var(--accent-dark);
+input,
+textarea {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 2px solid var(--accent-dark);
   background-color: var(--background-alt);
-  color:var(--foreground);
-}
-input:focus, textarea:focus {
-  outline: 3px solid var(--accent-light);
-  outline-offset: -1px;
+  color: var(--foreground);
 }
 
+*:focus {
+  outline: 4px solid var(--accent-light);
+  outline-offset: 2px;
+}
+
+a:focus,
+a:active {
+  background-color: var(--warning);
+}
 
 /* Responsive template */
 /* Small Tablets */
-@media screen and (min-width: 620px){
+@media screen and (min-width: 620px) {
 }
 
 /* Large tablets and laptops */
-@media screen and (min-width: 960px){
+@media screen and (min-width: 960px) {
+  .main-logo {
+    margin: 1rem;
+  }
 }
 
 /* Desktops */
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
 }
-
-

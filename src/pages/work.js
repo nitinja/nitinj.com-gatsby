@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/Layout/Layout"
 import SEO from "../components/seo"
 import styles from "./work.module.scss"
 import Tetris from "../images/projects/slick-tetris.png"
