@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React from "react"
+import React, {useEffect, createRef} from "react"
 import { RiCloseLine } from "react-icons/ri"
 import { Menu } from "./Menu"
 import styles from "./Menu.module.scss"
@@ -7,7 +7,12 @@ import Socials from "../Socials"
 import { createPortal } from "react-dom"
 
 function MobileMenu({ show, onClose, isIndexPage }) {
-  return createPortal(
+  let hostRef = createRef();
+  useEffect(() => {
+    hostRef.current = document.body;
+  },[]);
+
+  return hostRef.current ? createPortal(
     <div
       className={`${styles.mobileMenu} ${show ? styles.mobileMenuOpen : ""}`}
     >
@@ -22,8 +27,8 @@ function MobileMenu({ show, onClose, isIndexPage }) {
       <hr />
       {!isIndexPage && <Socials className={styles.mainMenuSocials} />}
     </div>,
-    document.body
-  )
+    hostRef.current
+  ) : null
 }
 
 MobileMenu.propTypes = {

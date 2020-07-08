@@ -20,7 +20,9 @@ export function ThemeSwitcher() {
     console.log("changed theme to ", newTheme)
 
     /* set theme as body class */
-    document.body.classList.replace(theme, newTheme)
+    if(document){
+      document.body.classList.replace(theme, newTheme);
+    }
 
     /* persiste theme setting */
     localStorage.setItem("theme", newTheme)
