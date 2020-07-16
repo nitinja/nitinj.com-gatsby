@@ -5,9 +5,8 @@ import styles from "./Menu.module.scss"
 export function Menu({ focusable }) {
   return (
     <ul className={styles.navList}>
-      <li>
+      <li className={styles.navItem}>
         <Link
-          className={styles.navItem}
           activeClassName={styles.active}
           to="/about/"
           tabIndex={focusable ? 0 : -1}
@@ -15,9 +14,8 @@ export function Menu({ focusable }) {
           About
         </Link>
       </li>
-      <li>
+      <li className={styles.navItem}>
         <Link
-          className={styles.navItem}
           activeClassName={styles.active}
           to="/bloglist/"
           tabIndex={focusable ? 0 : -1}
@@ -25,9 +23,8 @@ export function Menu({ focusable }) {
           Blog
         </Link>
       </li>
-      <li>
+      <li className={styles.navItem}>
         <Link
-          className={styles.navItem}
           activeClassName={styles.active}
           to="/work/"
           tabIndex={focusable ? 0 : -1}

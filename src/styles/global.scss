@@ -37,6 +37,9 @@ hr {
   height: 80px;
   width: 80px;
 }
+.main-logo-link {
+  line-height: auto;
+}
 .light .main-logo-dark {
   display: none;
 }
@@ -88,6 +91,12 @@ a:active {
   background-color: var(--warning);
 }
 
+/* Lists */
+ul, li {
+  margin: 0;
+  list-style-type: none;
+}
+
 /* Responsive template */
 /* Small Tablets */
 @media screen and (min-width: 620px) {
@@ -96,7 +105,7 @@ a:active {
 /* Large tablets and laptops */
 @media screen and (min-width: 960px) {
   .main-logo {
-    margin: 1rem;
+    // margin: 1rem;
   }
 }
 

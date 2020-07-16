@@ -54,7 +54,7 @@ const About = () => {
       </div>
       <h1>Contact</h1>
       <div style={{ padding: "1rem 2em" }}>
-        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
           <input type="email" name="email" />
           <textarea name="message"></textarea>
         </form>

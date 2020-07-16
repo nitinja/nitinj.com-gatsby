@@ -9,11 +9,15 @@
   text-align: center;
 
   .nav-item {
+    margin:1rem 0;
+  }
+  .nav-item  a {
     font-family: var(--headerFontFamily);
     font-size: 1rem;
     text-decoration: none;
-    margin-bottom: 1.3rem;
-    transition: all 0.2s ease-in-out;
+    // margin-bottom: 1.3rem;
+    transition: all 0.1s ease-in-out;
+    padding:0.25rem;
   }
   .nav-item:hover {
     color: var(--accent-dark);
@@ -27,14 +31,14 @@
 
 .mobileMenu {
   position: fixed;
-  top: 0;
+  left:0;
+  top: -100vh; // menu will be hidden initially, until top = 0
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
   color: var(--background);
   background-color: var(--foreground);
   color: var(--foreground);
   border-bottom: 1rem solid var(--foreground-alt);
-  top: -100vh;
   transition: all 0.2s ease-in-out;
 
   a {
@@ -46,6 +50,8 @@
 }
 .menuCloseButton {
   position: absolute;
+  display: flex;
+  align-items: center;
   color: var(--background-alt);
   right: 2rem;
   top: 2rem;
@@ -56,4 +62,11 @@
 .inMenuThemeSwitcher {
   display: block;
   margin-bottom: 2rem;
+}
+
+/* Large tablets and laptops */
+@media screen and (min-width: 960px) {
+  .mobileMenu {
+    display: none;
+  }
 }

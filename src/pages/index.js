@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/seo"
 import styles from "./index.module.scss"
-import Socials from "../components/Socials"
+import Socials from "../components/Socials/Socials"
 
 const IndexPage = ({ location }) => (
   <Layout isIndexPage={location.pathname === "/"}>
@@ -18,9 +18,9 @@ const IndexPage = ({ location }) => (
         I believe in accessibiliy and user centric design.
       </h2>
       <h2 className={styles.line}>
-        I <Link to="/bloglist/">write</Link> about Frontend Development.
+        I <Link to="/bloglist/">write</Link> about Frontend Development
       </h2>
-      <Socials className={styles.indexPageSocials} />
+      <Socials compact={false}/>
 
       <div className={styles.soFlair}>
         <a href="https://stackoverflow.com/users/741251/nitin-jadhav">

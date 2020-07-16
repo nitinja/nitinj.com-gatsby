@@ -41,7 +41,7 @@ export function ThemeSwitcher() {
   return (
     <div
       tabIndex="0"
-      aria-role="button"
+      role="button"
       aria-pressed={theme === "dark"}
       className={styles.switch}
     >
