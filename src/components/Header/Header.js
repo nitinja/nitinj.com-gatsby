@@ -7,7 +7,7 @@ import Logo from "./Logo.js"
 import { Menu } from "../Menu/Menu"
 import { useLocalStorage } from "../../helpers/useLocalStorage"
 import MobileMenu from "../Menu/MobileMenu"
-import Socials from "../Socials/Socials"
+import Socials from "../SocialIcons/Socials"
 
 const Header = ({ isIndexPage }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

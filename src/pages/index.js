@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/seo"
 import styles from "./index.module.scss"
-import Socials from "../components/Socials/Socials"
+import Socials from "../components/SocialIcons/Socials"
 
 const IndexPage = ({ location }) => (
   <Layout isIndexPage={location.pathname === "/"}>

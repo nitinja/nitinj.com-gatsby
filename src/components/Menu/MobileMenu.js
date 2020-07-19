@@ -3,8 +3,8 @@ import React, { useEffect, createRef } from "react"
 import { RiCloseLine } from "react-icons/ri"
 import { Menu } from "./Menu"
 import styles from "./Menu.module.scss"
-import Socials from "../Socials/Socials"
 import { createPortal } from "react-dom"
+import Socials from "../SocialIcons/Socials"
 
 function MobileMenu({ show, onClose, isIndexPage }) {
   return <div
