@@ -4,10 +4,10 @@ import styles from "./Header.module.scss"
 import { ThemeSwitcher } from "../ThemeSwitcher/ThemeSwitcher"
 import { RiMenuLine, RiCloseLine } from "react-icons/ri"
 import Logo from "./Logo.js"
-import Socials from "../Socials/Socials"
 import { Menu } from "../Menu/Menu"
 import { useLocalStorage } from "../../helpers/useLocalStorage"
 import MobileMenu from "../Menu/MobileMenu"
+import Socials from "../Socials/Socials"
 
 const Header = ({ isIndexPage }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
