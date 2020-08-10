@@ -14,7 +14,15 @@ const Work = () => (
             title="Slick tetris Project"
           >
             <img src={Tetris} alt="Tetris Project"></img>
-            <caption>Tetris</caption>
+            <div>Tetris</div>
+          </a>
+        </li>
+        <li className={styles.workCard}>
+          <a
+            href="https://youthful-bartik-2df8df.netlify.app/"
+            title="Ethereum Balance Checker App"
+          >
+            <div>Ethereum Balance Checker App</div>
           </a>
         </li>
       </ul>

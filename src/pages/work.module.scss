@@ -1,7 +1,7 @@
 .workCardsContainer {
-  padding: 2rem;
   ul {
-    display:flex;
+    display: flex;
+    justify-content: space-evenly;
   }
 }
 
@@ -11,19 +11,21 @@
   height: 20rem;
   padding: 1rem;
   background: var(--foreground-alt);
-  margin:1rem 2rem;
+  margin: 1rem;
+  display: grid;
+  place-items: center;
   img {
     width: 100%;
   }
-  caption {
+  div {
     color: var(--background);
     font-size: 1rem;
     font-weight: bold;
     margin: 0.3rem auto;
     display: block;
-    
+    text-align: center;
   }
   &:hover {
-    opacity:0.90;
+    opacity: 0.9;
   }
 }
