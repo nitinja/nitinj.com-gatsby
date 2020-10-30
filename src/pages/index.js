@@ -18,7 +18,7 @@ const IndexPage = ({ location }) => (
         I believe in accessibiliy and user centric design.
       </h2>
       <h2 className={styles.line}>
-        I <Link to="/bloglist/">write</Link> about Frontend Development
+        I <Link to="/bloglist/">write</Link> about Frontend Development.
       </h2>
       <Socials compact={false}/>
 
