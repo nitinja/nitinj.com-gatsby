@@ -24,7 +24,7 @@ const About = () => {
         <p>
           A multi‑disciplinary developer, specializing in{" "}
           <strong>frontend architecture and development</strong> based out of
-          Pune, India.
+          Cambridge, UK.
         </p>
         <p>
           Passionate about user experience. loves developing polished, refined
@@ -37,7 +37,7 @@ const About = () => {
         </p>
         <p>Loves playing video games and reading lots of books.</p>
         <p>
-          I am currently working at QIO Technologies at Pune (a UK based company
+          I am currently working at QIO Technologies (a UK based company
           working in IOT).
         </p>
         <p>
