@@ -37,8 +37,7 @@ const About = () => {
         </p>
         <p>Loves playing video games and reading lots of books.</p>
         <p>
-          I am currently working at QIO Technologies (a UK based company
-          working in IOT).
+          I live in Austin, United states. I am currently working at EPAM Technologies.
         </p>
         <p>
           Here is my{" "}
@@ -47,44 +46,10 @@ const About = () => {
             target="_blank"
             href="/Resume-Nitin-Jadhav-Frontend.pdf"
           >
-            Resume.
+            Resume. 
           </a>
         </p>
         <br />
-      </div>
-      <h1>Contact</h1>
-      <div style={{ padding: "1rem 2em" }}>
-        <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
-          <input type="email" name="email" />
-          <textarea name="message"></textarea>
-        </form>
-        <form
-          name="contact-jsx"
-          className={styles.contactForm}
-          data-netlify="true"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <input
-            name="email"
-            type="email"
-            placeholder="Your Email"
-            onChange={handleEmailChange}
-          />
-          <textarea
-            style={{ height: "4rem" }}
-            name="message"
-            placeholder="Message"
-            onChange={handleMessageChange}
-          ></textarea>
-          <button
-            className="button__primary"
-            type="submit"
-            id="submitContactButton"
-            disabled={!formValid}
-          >
-            Send Message
-          </button>
-        </form>{" "}
       </div>
     </Layout>
   )
