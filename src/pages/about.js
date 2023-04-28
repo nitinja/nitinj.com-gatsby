@@ -23,8 +23,7 @@ const About = () => {
       <div style={{ padding: "2rem" }}>
         <p>
           A multi‑disciplinary developer, specializing in{" "}
-          <strong>frontend architecture and development</strong> based out of
-          Cambridge, UK.
+          <strong>frontend architecture and development</strong> living in Austin, Texas.
         </p>
         <p>
           Passionate about user experience. loves developing polished, refined
@@ -35,9 +34,9 @@ const About = () => {
           Deeply cares about accessibility and performance. Believes small,
           incremental improvements can really add up over time.
         </p>
-        <p>Loves playing video games and reading lots of books.</p>
+        <p>Loves playing video games, debating future of our species and finding best places for beer + eating around.</p>
         <p>
-          I live in Austin, United states. I am currently working at EPAM Technologies.
+          I am currently working at EPAM Technologies as Lead Front-end Developer.
         </p>
         <p>
           Here is my{" "}
