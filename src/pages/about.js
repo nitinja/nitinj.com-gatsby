@@ -38,16 +38,6 @@ const About = () => {
         <p>
           I am currently working at EPAM Technologies as Lead Front-end Developer.
         </p>
-        <p>
-          Here is my{" "}
-          <a
-            title="Download my Resume"
-            target="_blank"
-            href="/Resume-Nitin-Jadhav-Frontend.pdf"
-          >
-            Resume. 
-          </a>
-        </p>
       </div>
     </Layout>
   )
